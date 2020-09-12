@@ -1,25 +1,25 @@
-﻿using System;
+using System;
 using System.Collections;
 using UnityEngine;
 
 
-public class ScreenShotManager : MonoBehaviour
+public class ScreenshotManager : MonoBehaviour
 {
     #region Singleton
 
-    private static ScreenShotManager instance = null;
-    public static ScreenShotManager Instance
+    private static ScreenshotManager instance = null;
+    public static ScreenshotManager Instance
     {
         get
         {
             if (instance == null)
             {
-                instance = FindObjectOfType(typeof(ScreenShotManager)) as ScreenShotManager;
+                instance = FindObjectOfType(typeof(ScreenshotManager)) as ScreenshotManager;
                 if (instance == null)
                 {
                     instance =
-                        new GameObject(nameof(ScreenShotManager))
-                            .AddComponent(typeof(ScreenShotManager)) as ScreenShotManager;
+                        new GameObject(nameof(ScreenshotManager))
+                            .AddComponent(typeof(ScreenshotManager)) as ScreenshotManager;
                 }
 
                 DontDestroyOnLoad(instance);
